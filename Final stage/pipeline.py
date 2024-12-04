@@ -7,6 +7,7 @@ import optuna
 import time
 from sklearn.model_selection import cross_val_score
 
+
 class FeatureFiltration:
     def __init__(self, data_train, data_test):
         self.data_train = data_train
@@ -123,6 +124,7 @@ class Model:
         print(f"Optuna optimization took {end_time - start_time:.2f} seconds.")
         return study.best_params
 
+    # Разделить на fit, predict
     def train_model(self, X_train, y_train, X_test, y_test):
         start_time = time.time()  # Начало отслеживания времени
 
